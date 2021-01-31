@@ -1,7 +1,6 @@
 <?php
 if (isset($_POST['email']) && !empty($_POST['email'])){
     echo "O usuário envio o e-mail.";
-    echo "- Cagando o código v1.0";
 }
 ?>
 
