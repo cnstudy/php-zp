@@ -10,9 +10,10 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
     <meta charset="UTF-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/script.js"></script>
     <title>Portal</title>
 </head>
-<body style="background-color: #5a5959">
+<body style="background-color: #0d1117; color: #c9d1d9">
 <div class="topo">
     <div class="topoint">
         <div class="topoleft">
@@ -132,7 +133,23 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
                     </form>
                 </div>
             </div>
+            <div>
+                <button onclick="trocarDiv()">Enviar</button>
+                <button onclick="this.innerHTML = prompt('Digite o nome para o botão');">Botão qualquer</button>
+                <h1 id="area">
+                    alguma coisa...
+                </h1>
+                <h3>Ingrdientes do bolo</h3>
+                <input type="text" id="ingrdientes">
+                <button onclick="adicionarIngrediente()">Adicionar Item</button>
+                <ul id="lista">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
         </div>
+
         <div class="right-side">
             <div class="widget">
                 <div class="widget-titulo">SOCIAL</div>
