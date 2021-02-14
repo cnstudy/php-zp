@@ -1,3 +1,5 @@
 bkp_db.sql
 *.txt
 pastaIgnorada
+.idea
+.idea/encodings.xml

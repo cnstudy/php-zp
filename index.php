@@ -8,7 +8,6 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="assets/js/script.js"></script>
     <title>Portal</title>
@@ -129,8 +128,25 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
                         <input type="email" name="email" id=""><br>
                         Senha: <br>
                         <input type="password" name="senha"><br>
+
+                        <select name="cidade" onchange="mudarCidade(this)">
+                            <option value="Sao_Paulo">São Paulo</option>
+                            <option value="Brasilia">Brasília</option>
+                            <option value="Fortaleza">Fortaleza</option>
+                            <option value="Rio_de_Janeiro">Rio de Janeiro</option>
+                        </select>
+                        <input type="text" id="campo" disabled>
                         <input type="submit" value="Enviar dados">
                     </form>
+                    <br>
+                    <?php
+                    $x = 0;
+                    while ($x < 10){
+                        echo "X é: " . $x . '<br>';
+                        $x++;
+                    }
+                    echo $x++;
+                    ?>
                 </div>
             </div>
             <div>
@@ -140,13 +156,14 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
                     alguma coisa...
                 </h1>
                 <h3>Ingrdientes do bolo</h3>
-                <input type="text" id="ingrdientes">
-                <button onclick="adicionarIngrediente()">Adicionar Item</button>
-                <ul id="lista">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+                <input type="text" id="num1">
+                <input type="text" id="num2">
+                <button onclick="somar()">Somar</button>
+                <button onclick="verificador()">Verificador</button>
+                <button oncontextmenu="return false">Botão direito</button>
+                <button onclick="javascript:window.location.href='jogo-baloes.html'">Balões</button>
+                <button onclick="loopWhile()">Loop While</button>
+                <button class="btn" onclick="javascript:window.location.href='qual-o-numero.html'">Jogo</button>
             </div>
         </div>
 

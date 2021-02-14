@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Qual o número?</title>
+        <style type="text/css">
+            .numero {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                float: left;
+                margin-right: 10px;
+                font-size: 100px;
+                text-align: center;
+                line-height: 200px;
+                background-color: #EEE;
+            }
+            .botao {
+                width: 410px;
+                height: 40px;
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        </style>
+        <script type="text/javascript" src="assets/js/script.js"></script>
+    </head>
+    <body onload="resetar()">
+        <div class="numero" id="n1">0</div>
+        <input class="numero" type="text" id="n2">
+        <div style="clear:both"></div>
+        <button class="botao" onclick="jogoNumero()">Verificar</button>
+        <br><br>
+        <button onclick="javascript:window.history.back()">Voltar</button>
+    </body>
+</html>

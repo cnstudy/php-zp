@@ -216,6 +216,7 @@ body{
     overflow: hidden;
 }
 .slideshow-area{
+    color: black;
     height: 335px;
     background-color: #dddddd;
 }
