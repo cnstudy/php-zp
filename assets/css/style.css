@@ -170,6 +170,7 @@ body{
     max-width: 1040px;
     margin: auto;
     background-color: #999999;
+
 }
 .left-side{
     width: 753px;
@@ -219,6 +220,7 @@ body{
     color: black;
     height: 335px;
     background-color: #dddddd;
+    padding: 5px 5px 0;
 }
 
 

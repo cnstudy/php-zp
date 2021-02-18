@@ -138,14 +138,56 @@ if (isset($_POST['email']) && !empty($_POST['email'])){
                         <input type="text" id="campo" disabled>
                         <input type="submit" value="Enviar dados">
                     </form>
+                    <form action="" method="post">
+                        <div class="row">
+                            <hr>
+                            Digite os números abaixo
+                            <hr>
+                            <label for="">Num 1: </label>
+                            <input type="text" name="n1" required>
+                            <label for="">Num 2: </label>
+                            <input type="text" name="n2" required>
+                            <label for="">Num 3: </label>
+                            <input type="text" name="n3" required>
+
+                            <input type="submit" name="calcular" value="Enviar">
+                        </div>
+                    </form>
                     <br>
                     <?php
-                    $x = 0;
-                    while ($x < 10){
-                        echo "X é: " . $x . '<br>';
-                        $x++;
+
+                    //Exibe a média dos valores de um Array
+                    if (isset($_POST['calcular'])){
+                        $notas = [
+                                $_POST['n1'], $_POST['n2'], $_POST['n3'], $_POST['n4']
+                        ];
+                        $posicoes = count($notas);
+                        $soma = 0;
+                        for ($i = 0; $i <= $posicoes; $i++){
+                            $soma += $notas[$i];
+                        }
+                        $media = $soma / $posicoes;
+                        echo "A média dos valores é: " . number_format($media, 2, ',', '.') . "<br>";
                     }
-                    echo $x++;
+                    //Exibe a data atual através da função date(), retorna sempre 000000 para os microsegundos
+                    $data = date('d/m/Y H:i:s u');
+                    echo "Função date(): " . $data . "<br>";
+
+                    //Exibe a data atual através da função DateTime(), retorna o valor dos microsegundos
+                    $dataTime = new DateTime();
+                    echo "Data com a função DateTime(): " . $dataTime->format('d/m/Y H:i:s u') . "<br>";
+
+                    //Transformando a data em um Array, delimitador é o espaço
+                    $separaData = explode(" ", $dataTime->format('d/m/Y H:i:s u'));
+                    $microsegundos = $separaData[2];
+
+                    //Transformando uma string com os microsegundos em um Array
+                    $sepMicroSeg = str_split($microsegundos);
+                    $ultDigMicSegundos = $sepMicroSeg[5];
+                    echo "Estes são os microsegundos: " . $microsegundos . "<br>";
+                    echo "Último dígito dos Microsegundos: " . $ultDigMicSegundos . "<br>";
+                    $x = 15;
+                    echo $ultDigMicSegundos * ($x * $x);
                     ?>
                 </div>
             </div>
